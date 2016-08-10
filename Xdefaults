@@ -1,0 +1,64 @@
+URxvt*scrollBar: false
+Rxvt.cursorBlink: 1
+URxvt*font: profont
+URxvt.boldFont: profont
+
+!URxvt*font: profont
+! --- special colors ---
+
+*background: #0d191d
+*foreground: #d9e6f2
+
+! --- standard colors ---
+
+! black
+*color0: #000000
+
+! bright_black
+*color8: #262626
+
+! red
+*color1: #9a977f
+
+! bright_red
+*color9: #bac7a8
+
+! green
+*color2: #87b870
+
+! bright_green
+*color10: #b1d9a0
+
+! yellow
+*color3: #9aa970
+
+! bright_yellow
+*color11: #bad1a0
+
+! blue
+*color4: #78a691
+
+! bright_blue
+*color12: #a9cfb2
+
+! magenta
+*color5: #8a9791
+
+! bright_magenta
+*color13: #b2c7b2
+
+! cyan
+*color6: #78b882
+
+! bright_cyan
+*color14: #a9d9aa
+
+! white
+*color7: #dbdbdb
+
+! bright_white
+*color15: #ffffff
+
+
+! ------------------------------------------------------------------------------
+! --- end of terminal colors section -------------------------------------------
