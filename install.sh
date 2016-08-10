@@ -1,9 +1,11 @@
 #!/bin/bash
-# A clean arch linux installation is assumed. You can replace the pacman commands with your package manager of choice and they will work.
-cp xinitrc ~/.xinitrc
-cp config.fish ~/.config/fish/
-cp sxhkdrc ~/.config/sxhkd/
-cp vimrc ~/.vimrc
-cp Xdefaults ~/.Xdefaults
-cp -r dotfilewm ~/.dotfilewm
+# A working copy of arch linux is assumed. Only feh and wmutils are needed for all of this to work.
+wd=$(basename $0)
+mkdir -p $wd/backups
+for FN in $(ls); do
+	mv ~/.FN $wd/backups
+	ln -s $FN ~/.$FN
+done
+
+# Install the wm if it's not installed yet.
 ~/.dotfilewm/install.sh
