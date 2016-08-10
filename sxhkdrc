@@ -58,20 +58,20 @@ super + x
 
 #alt-tabbing
 alt + Tab
-      ~/.dotfileswm/core/alttab.sh n
+      ~/.dotfilewm/core/alttab.sh n
 
 alt + shift + Tab
-      ~/.dotfileswm/core/alttab.sh p
+      ~/.dotfilewm/core/alttab.sh p
 
 #WORKSPACES:
 super + e
-	  ~/.dotfileswm/core/workspace.sh -n
+	  ~/.dotfilewm/core/workspace.sh -n
 super + q
-	  ~/.dotfileswm/core/workspace.sh -p
+	  ~/.dotfilewm/core/workspace.sh -p
 super + {0,1,2,3,4,5,6,7,8,9}
-	  ~/.dotfileswm/core/workspace.sh -g {0,1,2,3,4,5,6,7,8,9}
+	  ~/.dotfilewm/core/workspace.sh -g {0,1,2,3,4,5,6,7,8,9}
 super + shift + {0,1,2,3,4,5,6,7,8,9}
-	  ~/.dotfileswm/core/workspace.sh -m {0,1,2,3,4,5,6,7,8,9}
+	  ~/.dotfilewm/core/workspace.sh -m {0,1,2,3,4,5,6,7,8,9}
 
 ###BEGIN BLOCK OF HARDCODED WINDOW COMMANDS###
 #This is mostly for a tiling-wm-esque functionality. Feel free to delete these (or throw up a PR with something automatic!)

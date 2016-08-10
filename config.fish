@@ -14,4 +14,4 @@ set -x SXHKD_SHELL /usr/bin/bash
 
 # Gotta listen to muh daemon.
 alias urxvt "urxvtc -e refr"
-alias refr "~/.derswm/looks/term_recolor.sh < ~/.Xresources"
+alias wallchange ~/.dotfilewm/looks/wallchange.sh
