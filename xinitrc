@@ -16,7 +16,4 @@ twm &
 sxhkd &
 ########
 pulseaudio &
-#use this if you're not going to change the wp every time.
-sh ~/.fehbg &
-urxvt -e ~/.derswm/welcome.sh || pkill urxvt
 urxvtd
