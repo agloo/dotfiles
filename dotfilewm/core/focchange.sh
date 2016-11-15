@@ -11,5 +11,5 @@ done
 currwin="$(pfw)"
 wtf "$1"
 # TODO this is ugly. Find a good place to put the script.
-$wd/../looks/chwbs/chwbs -s 3 -c 0x555753 $currwin
-$wd/../looks/chwbs/chwbs -s 3 -c 0xcccccc "$1"
+chwb -s 3 -c 0x555753 $currwin
+chwb -s 3 -c 0xcccccc "$1"

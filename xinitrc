@@ -6,14 +6,15 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-# TODO stop being lazy
 [[ -f ~/.Xdefaults ]] && xrdb -merge ~/.Xdefaults
-#[[ -f ~/.Xresources]] && xrdb -override ~/.Xresources
-#######
-#SHOULDN'T YOU BE DOING SOMETHING PRODUCTIVE?
+[[ -f ~/.Xresources ]] && xrdb -load ~/.Xresources
+# ****WM:****
 twm &
 ~/.derswm/main.sh &
 sxhkd &
-########
+# **** ****
 pulseaudio &
+sh ~/.fehbg &
+urxvt -e ~/.derswm/welcome.sh &
+redshift &
 urxvtd

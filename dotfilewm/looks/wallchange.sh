@@ -46,10 +46,10 @@ $wd/term_recolor.sh < ~/.Xresources
 # For something bolder:
 # Clean up old pulse:
 killall -9 peak_detect.py
-killall -9 mass_pulse.sh
-killall -9 mass_border.sh
+killall -9 pulse.sh
+killall -9 border.sh
 # New pulse:
-$wd/pulse/mass_pulse.sh &
+$wd/pulse/pulse.sh &
 
 # For the wallpaper:
 cp $new_wall $wd/currwall
