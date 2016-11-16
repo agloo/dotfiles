@@ -24,12 +24,12 @@ set -x SXHKD_SHELL /usr/bin/bash
 set -x VISUAL vim
 
 # Gotta listen to muh daemon.
+alias bk "cd ~/berk"
 alias urxvt "urxvtc -e refr"
 alias refr "~/.derswm/looks/term_recolor.sh < ~/.Xresources"
 alias wallchange ~/.derswm/looks/wallchange.sh
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias 162 "cd ~/berk/162/vm"
-alias 162lgin "cd ~/berk/162/vm & login"
 alias nsa "sudo netctl stop-all"
 alias nab "sudo netctl start AB"
 alias steb "sudo netctl start steb"
