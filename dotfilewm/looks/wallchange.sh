@@ -1,6 +1,6 @@
 #!/bin/bash
 # Get the image name from standard in.
-# The picture has to be a .png for some sordid reason.
+# The picture has to be a .png for colors to work for some sordid reason.
 new_wall="$1"
 wd="$(dirname $0)"
 
@@ -15,40 +15,44 @@ if [ $(printf $new_wall | rev | cut -c -4 | rev) == ".jpg" ]; then
 	# Use convert if you don't want to lose your filthy jpgs.
 	echo "This file is a JPG. Converting it to a .png."
 	mogrify -format png $new_wall
+  rm $new_wall
 	new_wall="$(echo $new_wall | rev | cut -c 5- | rev).png"
 fi
 
 # For the terminal (urxvt and xterm only):
-# TODO Make getting colors part of the installation, and source it relatively here.
-# Darker images tend to make things a little hard to see.
-# Feel free to increase the number of clusters/take the lighter ones.
 echo "Getting colors..."
-colors=$(colors -n 32 $new_wall)
-colors=$(echo $colors | cut -f 9-24 -d " ")
-printf "%s\n" $colors | $wd/toxrdb.sh > ~/.Xresources
-printf "%s\n" $colors | $wd/toxrdb.sh | xrdb -override
-
-## For lemonbar: Not used right now since I'm not changing backgrounds
-# but it may become a thing.
-#pkill lemonbar
-#$wd/lemon.sh &
+raw_colors=$(colors -n 32 $new_wall)
+colors=$(echo $raw_colors | xargs $wd/xtheme.py)
+printf "%s\n" $colors | $wd/toxrdb > ~/.Xresources
+printf "%s\n" $colors | $wd/toxrdb | xrdb -override
 
 # For the border:
-filtered_colors=$(echo $colors|sed 's/\#//g')
-morph_colors=$($wd/colormorph.py 10 $filtered_colors)
+# Remove the leading hashes
+filtered_colors=$(echo $raw_colors | sed 's/\#//g')
+# Blend the colors together.
+gradient=$($wd/colormod.py -r 10 $filtered_colors)
+# Fade them for background windows
+fadient=$($wd/colormod.py -f .3 $gradient)
+
 #Write out the border colors we're using for the rest of the scripts to access:
-echo $morph_colors | sed "s/\#//g" > $wd/sincolors
+echo $gradient | sed "s/\#//g" > $wd/gradient
+# And the faded colors:
+echo $fadient| sed "s/\#//g" > $wd/faded
+
+
 # Change the current term's color scheme while we're at it.
 $wd/term_recolor.sh < ~/.Xresources
+
 # For standard border:
-#pkill border.sh
-#echo "$morph_colors"|xargs $wd/border.sh &
-# For something bolder:
+#echo "$gradient"|xargs $wd/border.sh &
+
+# For VU bolder (Bring your own VU meter):
 # Clean up old pulse:
-killall -9 peak_detect.py
 killall -9 pulse.sh
 killall -9 border.sh
-# New pulse:
+# The python script is made to silently exit when the pipe closes.
+
+# Start a new one:
 $wd/pulse/pulse.sh &
 
 # For the wallpaper:

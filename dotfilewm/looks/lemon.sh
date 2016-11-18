@@ -1,5 +1,6 @@
 #!/bin/bash
-# Credit for Clock goes to archwiki
+# Copied from arch tutorial (shaddap I'm lazy)
+# Define the clock
 Clock() {
         DATETIME=$(date "+%a %b %d, %T")
 
@@ -21,9 +22,7 @@ while :; do
         which=$(expr 1 - $which)
         sound=$(amixer get Master | egrep -o "[0-9]+%" -m 1)
         wifi=$(netctl list | grep \* | cut -c 3-)
-        LINE=`ps -eo pcpu |grep -vE '^\s*(0.0|%CPU)' |sed -n '1h;$!H;$g;s/\n/ +/gp'`
-        cpu=$(bc <<< $LINE)
-        echo -e "WS-$(cat /tmp/workspaces/curr) CPU-$cpu% %{c}$bookend$(date '+%a %b %d,  %T')$bookend%{c} %{r} BAT-$power SND-$sound WFI-$wifi%{r}"
+        echo -e "WS-$(cat /tmp/"$USER"_workspaces/curr)% %{c}$bookend$(date '+%a %b %d,  %T')$bookend%{c} %{r} BAT-$power SND-$sound WFI-$wifi%{r}"
         sleep 1
  done
 }

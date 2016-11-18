@@ -43,7 +43,7 @@ filetype plugin on
 filetype plugin indent on
 
 "Colors:
-syntax enable
+syntax on
 set t_Co=256
 colorscheme ego
 hi NonText ctermbg=none "Make sure hanging screen matches the background

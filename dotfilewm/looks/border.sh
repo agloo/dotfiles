@@ -15,6 +15,6 @@ fi
 while :; do
     for c in $colors; do
         chwb -c $c $(pfw)
-        sleep $FREQ
+            sleep $FREQ
         done
  done

@@ -23,11 +23,11 @@ set -x SXHKD_SHELL /usr/bin/bash
 # Make the default editor vim
 set -x VISUAL vim
 
-# Gotta listen to muh daemon.
+# aliases
 alias bk "cd ~/berk"
 alias urxvt "urxvtc -e refr"
-alias refr "~/.derswm/looks/term_recolor.sh < ~/.Xresources"
-alias wallchange ~/.derswm/looks/wallchange.sh
+alias refr "~/.dotfilewm/looks/term_recolor.sh < ~/.Xresources"
+alias wallchange ~/.dotfilewm/looks/wallchange.sh
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias 162 "cd ~/berk/162/vm"
 alias nsa "sudo netctl stop-all"
@@ -37,3 +37,11 @@ alias todo "vim ~/todo"
 alias sched "vim ~/sched"
 alias vi "vim"
 alias rswf "./.rswf"
+
+
+# Start X at login
+if status --is-login
+  if test -z "$DISPLAY" -a $XDG_VTNR = 1
+		exec startx -- -keeptty >~/.xorg.log ^&1
+	end
+end

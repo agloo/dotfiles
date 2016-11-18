@@ -10,13 +10,13 @@ fi
 [[ -f ~/.Xresources ]] && xrdb -load ~/.Xresources
 # ****WM:****
 twm &
-~/.derswm/main.sh &
+~/.dotfilewm/main.sh &
 export WIDTH=$(xrandr | grep \* | cut -c 4-11 | cut -d x -f 1)
 export HEIGHT=$(xrandr | grep \* | cut -c 4-11 | cut -d x -f 2)
 sxhkd &
 # **** ****
 pulseaudio &
 sh ~/.fehbg &
-urxvt -e ~/.derswm/welcome.sh &
+urxvt -e ~/.dotfilewm/welcome.sh &
 redshift &
 urxvtd

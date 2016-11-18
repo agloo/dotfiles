@@ -1,5 +1,5 @@
 #!/bin/sh
-# All credit goes to z3bra
+# Sourced from z3bra
 
 CPT=0
 while read HEXCODE; do
