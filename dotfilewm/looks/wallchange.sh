@@ -40,9 +40,6 @@ echo $gradient | sed "s/\#//g" > $wd/gradient
 echo $fadient| sed "s/\#//g" > $wd/faded
 
 
-# Change the current term's color scheme while we're at it.
-$wd/term_recolor.sh < ~/.Xresources
-
 # Border:
 # Clean up old pulse and border scripts:
 killall -9 pulse.sh
