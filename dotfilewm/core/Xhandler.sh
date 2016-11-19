@@ -18,7 +18,7 @@ while IFS=: read ev wid; do
                 $wd/focchange.sh $wid t; wmv -a $(wmp) "$wid";;
             #Window deletion.
             18)
-				$wd/alttab.sh p;;
+								$wd/x-alt-tab;;
 
     esac
 done

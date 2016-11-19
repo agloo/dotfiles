@@ -9,7 +9,6 @@ fi
 [[ -f ~/.Xdefaults ]] && xrdb -merge ~/.Xdefaults
 [[ -f ~/.Xresources ]] && xrdb -load ~/.Xresources
 # ****WM:****
-twm &
 ~/.dotfilewm/main.sh &
 export WIDTH=$(xrandr | grep \* | cut -c 4-11 | cut -d x -f 1)
 export HEIGHT=$(xrandr | grep \* | cut -c 4-11 | cut -d x -f 2)
