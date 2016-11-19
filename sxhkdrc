@@ -75,25 +75,26 @@ super + shift + {0,1,2,3,4,5,6,7,8,9}
 
 ###BEGIN BLOCK OF HARDCODED WINDOW COMMANDS###
 #This is mostly for a tiling-wm-esque functionality. Feel free to delete these (or throw up a PR with something automatic!)
-#Windows 7 style tiling:
+# NOTE: while these commands do adapt to differing screen dimensions, they assume a 3 pixel border for aesthetic purposes, and a 10 pixel bar.
+# Tiling:
 #small gap left in for style.
 super + {Left, Right}
-      wtp {0, 693} 10 668 755 $(pfw)
+      wtp {0, $(expr $WIDTH / 2 + 9)} 10 $(expr $WIDTH / 2 - 3) $(expr $HEIGHT - 12) $(pfw)
 
 #half windows: upper
 super + {y,u}
-      wtp {0, 693} 10 668 385 $(pfw)
+      wtp {0, $(expr $WIDTH / 2 + 9)} 10 $(expr $WIDTH / 2 - 3) $(expr $HEIGHT / 2 - 15) $(pfw)
 
 #half windows: lower
 super + {b,n}
-      wtp {0, 693} 409 668 355 $(pfw)
+      wtp {0, $(expr $WIDTH / 2 + 9)} $(expr $HEIGHT / 2 + 9) $(expr $WIDTH / 2 - 3) $(expr $HEIGHT / 2 - 15) $(pfw)
 
 #fullscreen:
 super + f
-      wtp 0 10 1360 750 $(pfw)
+      wtp -3 10 $WIDTH $(expr $HEIGHT - 10) $(pfw)
 #super-fullscreen
 super + F
-      wtp 0 0 1360 760 $(pfw)
+      wtp -3 -3 $WIDTH $HEIGHT $(pfw)
 
 #termsize
 super + t
