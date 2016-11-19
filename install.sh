@@ -1,7 +1,7 @@
 #!/bin/bash
 # A fresh working copy of arch linux is assumed.
 # feh, fish, wmutils, and sxhkd are needed for all of this to work.
-wd=$(dirname "$(readlink f $0)")
+wd=$(dirname $0)
 cd $wd
 mkdir -p $wd/backups
 

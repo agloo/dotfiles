@@ -2,7 +2,7 @@
 # Get colors
 wd="$(dirname $0)"
 git clone git://git.2f30.org/colors.git
-cd $wd/colors
+cd ./colors
 make
 mv colors ../looks
 cd ..
