@@ -43,17 +43,16 @@ echo $fadient| sed "s/\#//g" > $wd/faded
 # Change the current term's color scheme while we're at it.
 $wd/term_recolor.sh < ~/.Xresources
 
-# For standard border:
-#echo "$gradient"|xargs $wd/border.sh &
-
-# For VU bolder (Bring your own VU meter):
-# Clean up old pulse:
+# Border:
+# Clean up old pulse and border scripts:
 killall -9 pulse.sh
 killall -9 border.sh
 # The python script is made to silently exit when the pipe closes.
 
 # Start a new one:
-$wd/pulse/pulse.sh &
+$wd/border.sh &
+# Use this if you're using the VU meter:
+# $wd/pulse/pulse.sh &
 
 # For the wallpaper:
 cp $new_wall $wd/currwall

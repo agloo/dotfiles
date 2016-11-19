@@ -8,6 +8,6 @@ $wd/goodwew | $wd/core/Xhandler.sh &
 # Initialize workspaces.
 $wd/core/workspace.sh -i &
 # Start the window modification script:
-$wd/looks/pulse/pulse.sh &
+$wd/looks/border.sh &
 # Start lemonbar.
 $wd/looks/lemon.sh
