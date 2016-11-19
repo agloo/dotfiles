@@ -23,8 +23,8 @@ fi
 echo "Getting colors..."
 raw_colors=$(colors -n 32 $new_wall)
 colors=$(echo $raw_colors | xargs $wd/scheme.py)
-printf "%s\n" $colors | $wd/toxrdb > ~/.Xresources
-printf "%s\n" $colors | $wd/toxrdb | xrdb -override
+printf "%s\n" $colors | $wd/toxrdb.sh > ~/.Xresources
+printf "%s\n" $colors | $wd/toxrdb.sh | xrdb -override
 
 # For the border:
 # Remove the leading hashes
