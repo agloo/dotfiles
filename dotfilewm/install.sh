@@ -12,7 +12,6 @@ rm -rf colors
 git clone https://github.com/patrickhaller/no-wm.git
 cd no-wm
 make
-mv x-alt-tab ../core
 mv x-focus-manager ../core
 cd ..
 rm -rf no-wm

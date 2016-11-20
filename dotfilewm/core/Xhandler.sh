@@ -11,14 +11,17 @@ while IFS=: read ev wid; do
         continue
     fi
     case $ev in
-            #handles mouseover focus. Pretty sure you need a wm to pull this off.
-            7) $wd/focchange.sh $wid;;
+            #Handles mouseover focus.
+            7)
+							$wd/focchange.sh $wid;;
+
             #Focus a window upon its creation.
             16)
-                $wd/focchange.sh $wid t; wmv -a $(wmp) "$wid";;
-            #Window deletion.
+							$wd/focchange.sh $wid t; wmv -a $(wmp) "$wid";;
+
+						#Window deletion.
             18)
-								$wd/x-alt-tab;;
+							$wd/alttab.sh;;
 
     esac
 done
