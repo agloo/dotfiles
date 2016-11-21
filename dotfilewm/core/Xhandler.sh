@@ -21,7 +21,7 @@ while IFS=: read ev wid; do
 
 						#Window deletion.
             18)
-							$wd/alttab.sh;;
+							$wd/alttab.sh p;;
 
     esac
 done
