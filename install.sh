@@ -32,5 +32,8 @@ ln ./sxhkdrc ~/.config/sxhkd/sxhkdrc
 [ -e ~/.config/fish/config.fish ] && mv ~/.config/fish/config.fish $wd/backups
 ln  ./config.fish ~/.config/fish/config.fish
 
+#background script
+ln fehbg ~/.fehbg
+
 # Install the wm if it's not installed yet.
 ~/.dotfilewm/install.sh
