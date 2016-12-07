@@ -16,6 +16,5 @@ sxhkd &
 # **** ****
 pulseaudio &
 sh ~/.fehbg &
-urxvt -e ~/.dotfilewm/welcome.sh &
 redshift &
 urxvtd
