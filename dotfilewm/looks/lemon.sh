@@ -14,15 +14,10 @@ while :; do
         tmp=$(acpi -b)
         tmp=${tmp%\%*}
         power=$(echo "$tmp%" | cut -c 12- | rev | cut -f1 -d " " | rev)
-
-        bookend="   ҈"
-        if [ $which -eq 0 ]; then
-            bookend="   ҉"
-        fi
         which=$(expr 1 - $which)
         sound=$(amixer get Master | egrep -o "[0-9]+%" -m 1)
         wifi=$(netctl list | grep \* | cut -c 3-)
-        echo -e "WS-$(cat /tmp/"$USER"_workspaces/curr)% %{c}$bookend$(date '+%a %b %d,  %T')$bookend%{c} %{r} BAT-$power SND-$sound WFI-$wifi%{r}"
+        echo -e "WS-$(cat /tmp/"$USER"_workspaces/curr) %{c}$bookend$(date '+%a %b %d,  %T')$bookend%{c} %{r} BAT-$power SND-$sound WFI-$wifi%{r}"
         sleep 1
  done
 }
