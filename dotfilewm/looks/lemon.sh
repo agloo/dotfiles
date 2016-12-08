@@ -17,8 +17,8 @@ while :; do
         which=$(expr 1 - $which)
         sound=$(amixer get Master | egrep -o "[0-9]+%" -m 1)
         wifi=$(netctl list | grep \* | cut -c 3-)
-        echo -e "WS-$(cat /tmp/"$USER"_workspaces/curr) %{c}$bookend$(date '+%a %b %d,  %T')$bookend%{c} %{r} BAT-$power SND-$sound WFI-$wifi%{r}"
+        echo -e "WS-$(cat /tmp/"$USER"_workspaces/curr) %{A:~/.dotfilewm/core/workspace.sh -n:}N %{A}%{A:~/.dotfilewm/core/workspace.sh -p:}P %{A} %{c}$bookend$(date '+%a %b %d,  %T')$bookend%{c} %{r} BAT-$power SND-$sound WFI-$wifi%{r}"
         sleep 1
  done
 }
-lemon_in | lemonbar -f profont -B $(grep "background" ~/.Xdefaults|rev|cut -c -7|rev) -F $(grep "foreground" ~/.Xdefaults|rev|cut -c -7|rev) -p -d -g 1000x10+183 -p
+lemon_in | lemonbar -f profont -B $(grep "background" ~/.Xdefaults|rev|cut -c -7|rev) -F $(grep "foreground" ~/.Xdefaults|rev|cut -c -7|rev) -p -d -g 1000x10+183 -p | bash -e
