@@ -8,6 +8,5 @@ while getopts ":t" opt; do
 done
 currwin="$(pfw)"
 wtf "$1"
-# If you don't want to do the color cycling, turn these on.
-#chwb -s 3 -c 0x555753 $currwin
-#chwb -s 3 -c 0xcccccc "$1"
+chwb -s 3 -c 0x555753 $currwin
+chwb -s 3 -c 0xcccccc "$1"

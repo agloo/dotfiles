@@ -14,8 +14,13 @@ export WIDTH=$(xrandr | grep \* | cut -c 4-11 | cut -d x -f 1)
 export HEIGHT=$(xrandr | grep \* | cut -c 4-11 | cut -d x -f 2)
 sxhkd &
 # **** ****
+# Automount USBs
+udiskie -2 -s &
+# Sound
 pulseaudio &
+# Background
 sh ~/.fehbg &
-urxvt -e ~/.dotfilewm/welcome.sh &
+# Flux clone
 redshift &
+# Terminal daemon. Kill to close the xsession.
 urxvtd

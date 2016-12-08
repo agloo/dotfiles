@@ -4,7 +4,7 @@ wd="$(dirname $0)"
 git clone git://git.2f30.org/colors.git
 cd ./colors
 make
-mv colors ../looks
+mv $wd/colors/colors ../looks
 cd ..
 rm -rf colors
 
@@ -12,6 +12,6 @@ rm -rf colors
 git clone https://github.com/agloo/opt.git
 cd opt
 make
-mv wew ../core/goodwew
+mv $wd/opt/wew ../core/goodwew
 cd ..
 rm -rf opt
