@@ -40,15 +40,22 @@ echo $gradient | sed "s/\#//g" > $wd/gradient
 echo $fadient| sed "s/\#//g" > $wd/faded
 
 
-# Border:
-# Clean up old pulse and border scripts:
-killall -9 pulse.sh
+### Border:
+# uncomment if you're using border colors:
+# Clean up old border script:
 killall -9 border.sh
-# The python script is made to silently exit when the pipe closes.
-
 # Start a new one:
-$wd/border.sh &
-# Use this if you're using the VU meter:
+ $wd/border.sh &
+
+
+
+# uncomment if you're using border colors:
+# Clean up old border script:
+# killall -9 pulse.sh
+# Start a new one:
+# $wd/pulse/border.sh &
+
+# uncomment this if you're using VU meter borders.
 # $wd/pulse/pulse.sh &
 
 # For the wallpaper:

@@ -30,13 +30,9 @@ alias refr "~/.dotfilewm/looks/term_recolor.sh < ~/.Xresources"
 alias wallchange ~/.dotfilewm/looks/wallchange.sh
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias 162 "cd ~/berk/162/vm"
-alias nsa "sudo netctl stop-all"
-alias nab "sudo netctl start AB"
-alias steb "sudo netctl start steb"
 alias todo "vim ~/todo"
 alias sched "vim ~/sched"
 alias vi "vim"
-alias rswf "./.rswf"
 
 
 # Start X at login

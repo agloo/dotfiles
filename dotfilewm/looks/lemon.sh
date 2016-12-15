@@ -16,8 +16,8 @@ while :; do
         power=$(echo "$tmp%" | cut -c 12- | rev | cut -f1 -d " " | rev)
         which=$(expr 1 - $which)
         sound=$(amixer get Master | egrep -o "[0-9]+%" -m 1)
-        wifi=$(netctl list | grep \* | cut -c 3-)
-        echo -e "WS-$(cat /tmp/"$USER"_workspaces/curr) %{A:~/.dotfilewm/core/workspace.sh -n:}N %{A}%{A:~/.dotfilewm/core/workspace.sh -p:}P %{A} %{c}$bookend$(date '+%a %b %d,  %T')$bookend%{c} %{r} BAT-$power SND-$sound WFI-$wifi%{r}"
+				wifi=$(nmcli -t -f NAME connection show --active)
+        echo -e "WS-$(cat /tmp/"$USER"_workspaces/curr)%{A:~/.dotfilewm/core/workspace.sh -p:} P%{A}%{A:~/.dotfilewm/core/workspace.sh -n:} N %{A} %{c}$bookend$(date '+%a %b %d,  %T')$bookend%{c} %{r} BAT-$power SND-$sound WFI-$wifi%{r}"
         sleep 1
  done
 }
