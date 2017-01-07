@@ -1,7 +1,11 @@
 URxvt*scrollBar: false
 Rxvt.cursorBlink: 1
-URxvt*font: profont
-URxvt.boldFont: profont
+Rxvt*locale: true
+! Use profont for smaller font
+! when you have a screen that's not 12 inches.
+! (note: all fonts are declared in /usr/share/fonts/misc/fonts.alias.)
+URxvt*font: prolrg
+URxvt.boldFont: prolrg
 
 !URxvt*font: profont
 ! --- special colors ---

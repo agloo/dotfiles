@@ -75,7 +75,10 @@ super + {0,1,2,3,4,5,6,7,8,9}
 super + shift + {0,1,2,3,4,5,6,7,8,9}
 	  ~/.dotfilewm/core/workspace.sh -m {0,1,2,3,4,5,6,7,8,9}
 
-###BEGIN BLOCK OF HARDCODED WINDOW COMMANDS###
+#Rotation for Thinkpad tablets (requires thinkpad-scripts):
+XF86RotateWindows
+		thinkpad-rotate left
+
 #This is mostly for a tiling-wm-esque functionality. Feel free to delete these (or throw up a PR with something automatic!)
 # NOTE: while these commands do adapt to differing screen dimensions, they assume a 3 pixel border for aesthetic purposes, and a 10 pixel bar.
 # Tiling:
