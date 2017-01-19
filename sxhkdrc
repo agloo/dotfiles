@@ -1,14 +1,12 @@
 #REMINDER: YOUR SCREEN IS 1366x768
 ###ACTUAL KEYBINDINGS:###
-super + shift + t
-      urxvtc
-super + shift + KP_Enter
-      urxvt
-super +  shift + c
+alt + shift + t
+			gnome-terminal
+alt + shift + c
       chromium #sorry luakit!
-super + d
+alt + d
       dmenu_run -nb black -nf white
-super + s
+alt + s
       scrot
 
 #I have to manually set my volume. You might not.

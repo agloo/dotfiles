@@ -8,4 +8,6 @@ fi
 
 [[ -f ~/.Xdefaults ]] && xrdb -merge ~/.Xdefaults
 [[ -f ~/.Xresources ]] && xrdb -load ~/.Xresources
+
+exec sxhkd &
 exec gnome-session
