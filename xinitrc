@@ -8,19 +8,4 @@ fi
 
 [[ -f ~/.Xdefaults ]] && xrdb -merge ~/.Xdefaults
 [[ -f ~/.Xresources ]] && xrdb -load ~/.Xresources
-# ****WM:****
-~/.dotfilewm/main.sh &
-export WIDTH=$(xrandr | grep \* | cut -c 4-11 | cut -d x -f 1)
-export HEIGHT=$(xrandr | grep \* | cut -c 4-11 | cut -d x -f 2)
-sxhkd &
-# **** ****
-# Automount USBs
-udiskie -2 -s &
-# Sound
-pulseaudio &
-# Background
-sh ~/.fehbg &
-# Flux clone
-redshift &
-# Terminal daemon. Kill to close the xsession.
-urxvtd
+exec gnome-session

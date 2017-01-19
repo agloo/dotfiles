@@ -34,6 +34,9 @@ alias todo "vim ~/todo"
 alias sched "vim ~/sched"
 alias vi "vim"
 
+set -x LD_LIBRARY_PATH "(LD_LIBRARY_PATH):/opt/cuda/lib64"
+set -x CUDA_HOME /opt/cuda/
+
 
 # Start X at login
 if status --is-login
