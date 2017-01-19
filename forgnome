@@ -1,0 +1,5 @@
+TIPS IF YOU'RE CONFIGURING GNOME:
+copy the gtk.css to .config/gtk-3.0
+run:
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+for a battery percentage.
