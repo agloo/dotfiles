@@ -1,17 +1,10 @@
 #REMINDER: YOUR SCREEN IS 1366x768
 ###ACTUAL KEYBINDINGS:###
-alt + shift + t
+super + shift + t
 			gnome-terminal
-alt + shift + c
+super + shift + c
       chromium #sorry luakit!
-alt + d
+super + d
       dmenu_run -nb black -nf white
-alt + s
+super + s
       scrot
-
-#I have to manually set my volume. You might not.
-XF86AudioMute
-      amixer sset Master toggle
-
-XF86Audio{Raise,Lower}Volume
-      amixer sset Master 5%{+,-}
