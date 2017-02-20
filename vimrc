@@ -9,6 +9,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vimwiki/vimwiki'
 Plugin 'szw/vim-tags'
 Plugin 'nvie/vim-flake8'
+Plugin '/sheerun/vim-polyglot'
 "Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
