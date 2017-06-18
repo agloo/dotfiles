@@ -2,19 +2,17 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 set shell=/bin/bash "Very important. Vundle errors without.
 call vundle#begin()
-Plugin 'godlygeek/csapprox'
+Plugin 'chriskempson/base16-vim'
+"Plugin 'jiangmiao/auto-pairs'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'luochen1990/rainbow'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'vimwiki/vimwiki'
 Plugin 'szw/vim-tags'
 Plugin 'nvie/vim-flake8'
-Plugin '/sheerun/vim-polyglot'
+Plugin 'sheerun/vim-polyglot'
 "Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
-
-"For rainbow:
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
     let g:rainbow_conf = {
     \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
@@ -45,14 +43,22 @@ filetype plugin indent on
 
 "Colors:
 syntax on
-set t_Co=256
-colorscheme ego
+"Dark:"
+"colorscheme base16-ocean
+colorscheme base16-bespin
+"Light:"
+"colorscheme base16-tomorrow
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
 hi NonText ctermbg=none "Make sure hanging screen matches the background
 hi LineNr ctermbg=none "Ditto for line numbers
 
 set nu "Never don't have this
+set tags=tags;/ "Make ctags look into parent dirs
+
 "set expandtab "Tabs to spaces
 set smarttab "Use shiftwidth instead of tabstop in indenting
+
 "For highlighting:
 set hlsearch "Highlight search tems.
 "clear search whenever you hit space.
@@ -67,14 +73,16 @@ nnoremap <F2> :!texi2pdf %<CR>
 set pastetoggle=<F3>
 "set hidden "If you edit a new file with :e, you can still access the old one.
 
-"Making tabs not suck
-
 "Luser proofing:
 "set mouse=a for wimps
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+
+"set tabs as arrows
+set list
+:set listchars=tab:␉·
 
 :ab abloud ****************************************
 :ab abtexh \documentclass{article}<CR>\usepackage{amsmath}<CR>\usepackage[margin=.5in]{geometry}<CR>\begin{document}<CR>\begin{enumerate}<CR><Tab>\item[1.]<CR><CR>\end{enumerate}<CR>\end{document}
