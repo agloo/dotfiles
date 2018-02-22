@@ -1,7 +1,10 @@
 #REMINDER: YOUR SCREEN IS 1366x768
+#
+# wm independent hotkeys
+#
 ###ACTUAL KEYBINDINGS:###
 alt + shift + t
-			gnome-terminal
+			urxvtc
 alt + shift + c
       chromium
 alt + shift + x
@@ -10,6 +13,3 @@ alt + d
       dmenu_run -nb black -nf white
 alt + s
       scrot
-# For thinkpads, because gnome is bad at screen rotation.
-alt + r
-			~/.rotate_touch.sh

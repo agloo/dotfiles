@@ -9,5 +9,15 @@ fi
 [[ -f ~/.Xdefaults ]] && xrdb -merge ~/.Xdefaults
 [[ -f ~/.Xresources ]] && xrdb -load ~/.Xresources
 
+# Keybindings
 exec sxhkd &
-exec gnome-session
+# Bar
+exec ~/.config/polybar/launch.sh &
+# Wallpaper
+exec ~/.fehbg &
+# Redshift
+exec redshift &
+# WM
+exec bspwm &
+# Terminal daemon to save muh cycles
+exec urxvtd

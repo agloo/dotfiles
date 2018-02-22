@@ -2,14 +2,12 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 set shell=/bin/bash "Very important. Vundle errors without.
 call vundle#begin()
-Plugin 'godlygeek/csapprox'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'luochen1990/rainbow'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vimwiki/vimwiki'
 Plugin 'szw/vim-tags'
 Plugin 'nvie/vim-flake8'
-"Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 
@@ -45,7 +43,7 @@ filetype plugin indent on
 "Colors:
 syntax on
 set t_Co=256
-colorscheme ego
+colorscheme base16-railscasts
 hi NonText ctermbg=none "Make sure hanging screen matches the background
 hi LineNr ctermbg=none "Ditto for line numbers
 
