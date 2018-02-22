@@ -1,7 +1,8 @@
 URxvt*scrollBar: false
 Rxvt.cursorBlink: 1
 Rxvt*locale: true
-URxvt.*Font: lemon
+URxvt.font: -benis-lemon-medium-r-normal--11-110-75-75-m-50-iso8859-9
+URxvt.boldFont: -benis-uushi-medium-r-normal--11-90-75-75-p-58-iso10646-1
 
 ! Base16 Railscasts
 ! Scheme: Ryan Bates (http://railscasts.com)
