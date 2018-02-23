@@ -14,6 +14,5 @@ sudo pacman -S bspwm \
 							 redshift
 
 yaourt -S vundle \
-					2bwm \
 					polybar \
 					phallus-fonts-git

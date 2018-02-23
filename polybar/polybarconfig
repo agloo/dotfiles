@@ -43,7 +43,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 2
 
-font-0 = lemon:pixelsize=12
+font-0 = artwiz lemon:pixelsize=12
 font-1 = Unifont:pixelsize=8
 ;font-2 = lemon:pixelsize=12
 

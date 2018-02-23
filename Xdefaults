@@ -4,7 +4,7 @@ Rxvt*locale: true
 ! FONTS:
 ! I use 3 fonts here:
 ! uushi as a small and cute bitmap terminal font, installed in the dependencies from phallus-fonts-git.
-! lemon as a bold, since it still looks bitmappy but it's different enough to be noticed as bold.
+! lemon as a bold, since it still looks bitmappy but its different enough to be noticed as bold.
 ! GNU unifont to render weird characters like the umbrella in my .bashrc.
 ! Notice that you have to prepend "xft:" when you use Unifont. I have lost sleep over this.
 URxvt.font: -benis-uushi-medium-r-normal--11-90-75-75-p-58-iso10646-1, xft:Unifont:size=6
