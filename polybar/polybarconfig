@@ -20,10 +20,10 @@ alert = #bd2c40
 
 [bar/default]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 96%
-height = 25
-offset-x = 2%
-offset-y = 1%
+width = 78%
+height = 2%
+offset-x = 11%
+offset-y = 0
 radius = 0
 fixed-center = true
 
@@ -44,8 +44,8 @@ module-margin-left = 0
 module-margin-right = 2
 
 font-0 = lemon:pixelsize=12
-font-1 = lemon:pixelsize=12
-font-2 = lemon:pixelsize=12
+font-1 = Unifont:pixelsize=8
+;font-2 = lemon:pixelsize=12
 
 modules-left = bspwm
 modules-center = date
@@ -53,8 +53,8 @@ modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan 
 
 tray-position = right
 tray-padding = 2
-tray-transparent = true
-;tray-background = #0063ff
+tray-transparent = false
+tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3

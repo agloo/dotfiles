@@ -5,6 +5,7 @@
 # to just assume that I'm using arch linux with yaourt and get everything
 # I want with hard coded commands.
 sudo pacman -S bspwm \
+							 bdf-unifont \
 							 dmenu \
 							 tmux \
 							 gvim \

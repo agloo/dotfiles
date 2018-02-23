@@ -1,8 +1,15 @@
 URxvt*scrollBar: false
 Rxvt.cursorBlink: 1
 Rxvt*locale: true
-URxvt.font: -benis-lemon-medium-r-normal--11-110-75-75-m-50-iso8859-9
-URxvt.boldFont: -benis-uushi-medium-r-normal--11-90-75-75-p-58-iso10646-1
+! FONTS:
+! I use 3 fonts here:
+! uushi as a small and cute bitmap terminal font, installed in the dependencies from phallus-fonts-git.
+! lemon as a bold, since it still looks bitmappy but it's different enough to be noticed as bold.
+! GNU unifont to render weird characters like the umbrella in my .bashrc.
+! Notice that you have to prepend "xft:" when you use Unifont. I have lost sleep over this.
+URxvt.font: -benis-uushi-medium-r-normal--11-90-75-75-p-58-iso10646-1, xft:Unifont:size=6
+URxvt.boldFont: -benis-lemon-medium-r-normal--11-110-75-75-m-50-iso8859-9, xft:Unifont:size=6
+!URxvt.boldFont:  -misc-symbola-medium-r-semicondensed--0-0-0-0-p-0-adobe-symbol
 
 ! Base16 Railscasts
 ! Scheme: Ryan Bates (http://railscasts.com)
