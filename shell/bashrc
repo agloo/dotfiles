@@ -10,7 +10,7 @@ if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
 fi
 
 alias ls='ls --color=auto'
-PS1='\W % '
+PS1='\w ☔ '
 
 BROWSER=/usr/bin/chromium
 EDITOR=/usr/bin/vim
