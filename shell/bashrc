@@ -10,7 +10,8 @@ if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
 fi
 
 alias ls='ls --color=auto'
-PS1='\w ☔ '
+PROMPT_COMMAND='if [ $? = 0 ]; then COLOR="\033[34m"; else COLOR="\033[33m"; fi'
+PS1='\w \[$(echo  -ne $COLOR)\]☔\[\033[m\] '
 
 BROWSER=/usr/bin/chromium
 EDITOR=/usr/bin/vim

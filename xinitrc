@@ -15,9 +15,9 @@ exec sxhkd &
 exec ~/.config/polybar/launch.sh &
 # Wallpaper
 exec ~/.fehbg &
-# Redshift
-exec redshift &
 # WM
 exec bspwm &
+# Redshift
+exec redshift-gtk &
 # Terminal daemon to save muh cycles
 exec urxvtd

@@ -49,12 +49,12 @@ font-1 = Unifont:pixelsize=8
 
 modules-left = bspwm
 modules-center = date
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature powermenu
+modules-right = filesystem xbacklight pulseaudio memory cpu wlan eth battery temperature powermenu
 
 tray-position = right
 tray-padding = 2
-tray-transparent = false
-tray-background = #0063ff
+;tray-transparent = false
+;tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -285,7 +285,7 @@ bar-volume-foreground-4 = #55aa55
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
-bar-volume-indicator = |
+bar-volume-indicator = ♩
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
 bar-volume-fill-font = 2
@@ -313,7 +313,7 @@ bar-volume-foreground-4 = #55aa55
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
-bar-volume-indicator = |
+bar-volume-indicator = ♩
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
 bar-volume-fill-font = 2
@@ -333,7 +333,7 @@ format-charging-underline = #ffb52a
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = "♥ "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
@@ -407,4 +407,4 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
-vim:ft=dosini
+;vim:ft=dosini
