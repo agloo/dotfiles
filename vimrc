@@ -43,6 +43,7 @@ filetype plugin indent on
 "Colors:
 syntax on
 set t_Co=256
+set background=dark
 colorscheme base16-railscasts
 hi NonText ctermbg=none "Make sure hanging screen matches the background
 hi LineNr ctermbg=none "Ditto for line numbers
