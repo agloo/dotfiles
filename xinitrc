@@ -17,7 +17,9 @@ exec ~/.config/polybar/launch.sh &
 exec ~/.fehbg &
 # WM
 exec bspwm &
-# Redshift
+# Redshift and systray icon
 exec redshift-gtk &
+# NetworkManager systray icon
+exec nm-applet &
 # Terminal daemon to save muh cycles
 exec urxvtd

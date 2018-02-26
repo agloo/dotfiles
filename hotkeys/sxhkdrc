@@ -121,3 +121,22 @@ super + {Left,Down,Up,Right}
 #
 super + c
 	chromium
+
+# #
+# [Thinkpad]
+# #
+
+XF86AudioRaiseVolume
+	amixer -q sset Master 3%+
+
+XF86AudioLowerVolume
+	amixer -q sset Master 3%-
+
+XF86AudioMute
+	amixer -q sset Master togglehromium
+
+XF86RotateWindows
+	~/dotfiles/thinkpad/flip_touch.sh rot
+
+XF86TaskPane
+	~/dotfiles/thinkpad/flip_touch.sh
