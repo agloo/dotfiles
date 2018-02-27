@@ -32,7 +32,7 @@ ln ./hotkeys/sxhkdrc ~/.config/sxhkd/sxhkdrc
 # bar:
 mkdir -p ~/.config/polybar
 [ -e ~/.config/polybar/config ] && mv ~/.config/polybar/config $wd/backups
-ln ./polybar/polybarconfig ~/.config/polybar/config
+ln ./polybar/config ~/.config/polybar/config
 [ -e ~/.config/polybar/launch.sh ] && mv ~/.config/polybar/launch.sh $wd/backups
 ln ./polybar/launch.sh ~/.config/polybar/launch.sh
 

@@ -8,20 +8,18 @@
 ;=====================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #222
+background = ${xrdb:background:#222}
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = ${xrdb:foreground:#dfdfdf}
 foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+primary = ${xrdb:color10:#ffb52a}
+secondary = ${xrdb:color11:#e60053}
+alert = ${xrdb:color9:#bd2c40}
 
 [bar/default]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 78%
-height = 2%
+height = 14
 offset-x = 11%
 offset-y = 0
 radius = 0
@@ -35,7 +33,7 @@ line-size = 1
 line-color = #f00
 
 border-size = 0
-border-color = #ffffff
+border-color = ${colors.foreground}
 
 padding-left = 0
 padding-right = 0
@@ -44,19 +42,18 @@ module-margin-left = 0
 module-margin-right = 2
 
 font-0 = artwiz lemon:pixelsize=12
-font-1 = Unifont:pixelsize=8
-;font-2 = lemon:pixelsize=12
+font-1 = Unifont:pixelsize=12
 
 modules-left = bspwm
 modules-center = date
-modules-right = filesystem xbacklight pulseaudio memory cpu wlan eth battery temperature powermenu
+modules-right = filesystem xbacklight alsa memory cpu wlan eth battery temperature powermenu
 
 tray-position = right
 tray-padding = 2
 ;tray-transparent = false
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
@@ -103,9 +100,9 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = ♥
+label-focused = ♟
 label-focused-background = ${colors.background-alt}
-label-focused-foreground = #FF0000
+label-focused-foreground = ${colors.alert}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
@@ -158,7 +155,7 @@ label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 ; Separator in between workspaces
-label-separator = \$
+;label-separator = $
 
 
 [module/mpd]
@@ -214,7 +211,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = net1
+interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -227,16 +224,16 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 0
+ramp-signal-1 = 25
+ramp-signal-2 = 50
+ramp-signal-3 = 75
+ramp-signal-4 = 100
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp9s0
+interface = enp0s25
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -337,14 +334,15 @@ format-full-prefix = "♥ "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = ♥
+ramp-capacity-1 = ♥
+ramp-capacity-2 = ♥
+ramp-capacity-0-foreground = ${colors.alert}
+ramp-capacity-1-foreground = ${colors.primary}
+ramp-capacity-2-foreground = ${colors.foreground}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = ☇
+animation-charging-1 = ⚡
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 

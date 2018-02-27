@@ -48,6 +48,8 @@ hi NonText ctermbg=none "Make sure hanging screen matches the background
 hi LineNr ctermbg=none "Ditto for line numbers
 
 set nu "Never don't have this
+set list
+set listchars=tab:>-
 "set expandtab "Tabs to spaces
 set smarttab "Use shiftwidth instead of tabstop in indenting
 "For highlighting:
@@ -59,12 +61,9 @@ set softtabstop=2
 set shiftwidth=2 "Number of spaces in autoindent
 set autoindent
 "set showmatch "use if rainbow parens isn't working
-"Example of autocmd:
+
 nnoremap <F2> :!texi2pdf %<CR>
 set pastetoggle=<F3>
-"set hidden "If you edit a new file with :e, you can still access the old one.
-
-"Making tabs not suck
 
 "Luser proofing:
 "set mouse=a for wimps
@@ -72,9 +71,3 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-
-:ab abloud ****************************************
-:ab abtexh \documentclass{article}<CR>\usepackage{amsmath}<CR>\usepackage[margin=.5in]{geometry}<CR>\begin{document}<CR>\begin{enumerate}<CR><Tab>\item[1.]<CR><CR>\end{enumerate}<CR>\end{document}
-:ab abtenum \begin{enumerate}<CR>\item[a]<CR>\end{enumerate}
-:ab abmatrix \begin{bmatrix}<CR>\end{bmatrix}
-:ab abcvh import cv2<CR>img = cv2.imopen("IMNAME")<CR><CR> cv2.imshow("Title", img)<CR>cv2.waitKey(0)
