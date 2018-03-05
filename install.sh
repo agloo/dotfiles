@@ -25,6 +25,7 @@ ln ./Xdefaults ~/.Xdefaults
 ln ./vim/vimrc ~/.vimrc
 
 # Custom color scheme
+mkdir -p ~/.vim/colors
 [ -e ~/.vim/colors/termcolors.vim ] && mv ~/.vim/colors/termcolors.vim $wd/backups
 ln ./vim/termcolors.vim ~/.vim/colors/termcolors.vim
 
