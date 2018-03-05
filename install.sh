@@ -22,14 +22,18 @@ ln ./Xdefaults ~/.Xdefaults
 
 # Vimrc
 [ -e ~/.vimrc ] && mv ~/.vimrc $wd/backups
-ln ./vimrc ~/.vimrc
+ln ./vim/vimrc ~/.vimrc
 
-# sxhkd:
+# Custom color scheme
+[ -e ~/.vim/colors/termcolors.vim ] && mv ~/.vim/colors/termcolors.vim $wd/backups
+ln ./vim/termcolors.vim ~/.vim/colors/termcolors.vim
+
+# sxhkd
 mkdir -p ~/.config/sxhkd
 [ -e ~/.config/sxhkd/sxhkdrc ] && mv ~/.config/sxhkd/sxhkdrc $wd/backups
 ln ./hotkeys/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
-# bar:
+# bar
 mkdir -p ~/.config/polybar
 [ -e ~/.config/polybar/config ] && mv ~/.config/polybar/config $wd/backups
 ln ./polybar/config ~/.config/polybar/config
@@ -42,8 +46,11 @@ mkdir -p ~/.config/bspwm
 ln ./bspwmrc ~/.config/bspwm/bspwmrc
 
 # If you want to use fish:
-# [ -e ~/.Xdefaults ] && mkdir -p ~/.config/fish
 # [ -e ~/.config/fish/config.fish ] && mv ~/.config/fish/config.fish $wd/backups
-# ln  ./config.fish ~/.config/fish/config.fish
+# ln  ./shell/config.fish ~/.config/fish/config.fish
+
+# If you want to use bash:
+[ -e ~/.bashrc ] && mv ~/.bashrc $wd/backups
+ln  ./shell/bashrc ~/.bashrc
 
 echo "done"

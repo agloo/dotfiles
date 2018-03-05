@@ -43,8 +43,8 @@ filetype plugin indent on
 "Colors:
 syntax on
 set t_Co=256
-set background=dark
-colorscheme base16-railscasts
+"set background=light " If you get weird different line numbers.
+colorscheme termcolors " Default just uses your Xresources. It is purity.
 hi NonText ctermbg=none "Make sure hanging screen matches the background
 hi LineNr ctermbg=none "Ditto for line numbers
 
