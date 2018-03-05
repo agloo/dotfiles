@@ -16,7 +16,7 @@ URxvt.boldFont: -benis-lemon-medium-r-normal--11-110-75-75-m-50-iso8859-9, xft:U
 !! special
 *foreground:   #02151a
 *background:   #f7f5ea
-*cursorColor:  #02151a
+*cursorColor:  #4d6899
 
 ! black
 *color0:       #161514

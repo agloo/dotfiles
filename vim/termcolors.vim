@@ -2,7 +2,7 @@
 " Maintainer:	Anders Lewis <greagle3@gmail.com>
 " Last Change:	2018 Mar 4
 
-" This color scheme just imposes a sensible arrangement of the colors that
+" This color scheme imposes a (hopefully) sensible arrangement of the colors that
 " your terminal is already using.
 
 " Set 'background' back to the default.  The value can't always be estimated
@@ -37,7 +37,7 @@ hi ModeMsg		term=bold	   cterm=bold
 hi MoreMsg		term=bold	   ctermfg=Green
 hi NonText		term=bold	   ctermfg=DarkBlue
 hi Question		term=standout  ctermfg=Green
-hi SpecialKey	term=bold	   ctermfg=Blue
+hi SpecialKey	term=bold	   ctermfg=Magenta
 hi StatusLine	term=reverse,bold cterm=reverse
 hi StatusLineNC term=reverse   cterm=reverse
 hi Title		term=bold	   ctermfg=Magenta
