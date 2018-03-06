@@ -13,6 +13,7 @@ sudo pacman -S bspwm \ # The whole wm.
 							 feh \ # For wallpapers.
 							 xcb-util-xrm \ # Not sure if this won't be included. Just need it for polybar.
 							 redshift # Just nice on my eyes.
+							 udiskie # Automount USB disks.
 
 yaourt -S vundle \ # To make my vimrc work
 					polybar \ # Used as systray and just generally a good bar.

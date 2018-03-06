@@ -21,5 +21,7 @@ exec bspwm &
 exec redshift-gtk &
 # NetworkManager systray icon
 exec nm-applet &
+# Automount usb sticks. pkill this to end your session
+exec udiskie &
 # Terminal daemon to save muh cycles
 exec urxvtd

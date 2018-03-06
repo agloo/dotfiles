@@ -1,6 +1,6 @@
 #!/bin/bash
 # A fresh working copy of arch linux is assumed.
-# fish, wmutils, and 2bwm are needed for all of this to work.
+# run install_deps to ensure that everything in this works.
 wd=$(dirname $0)
 cd $wd
 if [ -d "$wd/backups" ]; then
