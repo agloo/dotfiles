@@ -24,6 +24,10 @@ ln ./Xdefaults ~/.Xdefaults
 [ -e ~/.vimrc ] && mv ~/.vimrc $wd/backups
 ln ./vim/vimrc ~/.vimrc
 
+# tmux.conf
+[ -e ~/.tmux.conf ] && mv ~/.tmux.conf $wd/backups
+ln ./tmux.conf ~/.tmux.conf
+
 # Custom color scheme
 mkdir -p ~/.vim/colors
 [ -e ~/.vim/colors/termcolors.vim ] && mv ~/.vim/colors/termcolors.vim $wd/backups
