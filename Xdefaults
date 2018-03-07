@@ -13,10 +13,10 @@ URxvt.font: -benis-uushi-medium-r-normal--11-90-75-75-p-58-iso10646-1, xft:Unifo
 URxvt.boldFont: -benis-lemon-medium-r-normal--11-110-75-75-m-50-iso8859-9, xft:Unifont:size=6
 
 !! Magic School for Girls
-!! special
+! special
 *foreground:   #02151a
-*background:   #f7f5ea
-*cursorColor:  #4d6899
+*background:   #dcdcd3
+*cursorColor:  #02151a
 
 ! black
 *color0:       #161514
@@ -32,21 +32,20 @@ URxvt.boldFont: -benis-lemon-medium-r-normal--11-110-75-75-m-50-iso8859-9, xft:U
 
 ! yellow
 *color3:       #edc60e
-*color11:      #f5e985
+*color11:      #f0e690
 
 ! blue
 *color4:       #4d6899
-*color12:      #2da8bf
+*color12:      #539cae
 
 ! magenta
 *color5:       #85678f
 *color13:      #b294bb
 
 ! cyan
-*color6:       #a3c2b1
-*color14:      #c1e6d1
+*color6:       #7ea790
+*color14:      #9bb9a8
 
 ! white
 *color7:       #bbb9a2
 *color15:      #d4d2bf
-
