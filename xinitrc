@@ -9,6 +9,9 @@ fi
 [[ -f ~/.Xdefaults ]] && xrdb -merge ~/.Xdefaults
 #[[ -f ~/.Xresources ]] && xrdb -load ~/.Xresources
 
+# Make a thinkpad X220 MMB work as a button for things like blender.
+xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Scroll Method Enabled" 0 0 0
+
 # Keybindings
 exec sxhkd &
 # Bar
@@ -25,6 +28,3 @@ exec nm-applet &
 exec udiskie &
 # Terminal daemon to save muh cycles
 exec urxvtd
-
-# Make a thinkpad X220 MMB work as a button for things like blender.
-xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Scroll Method Enabled" 0 0 0
