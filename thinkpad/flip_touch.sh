@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# Touch autorotates for some reason
-
 # Find the line in "xrandr -q --verbose" output that contains current screen orientation and "strip" out current orientation.
 
 rotation="$(xrandr -q --verbose | grep 'connected' | egrep -o  '\) (normal|left|inverted|right) \(' | egrep -o '(normal|left|inverted|right)')"

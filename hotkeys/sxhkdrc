@@ -1,10 +1,19 @@
+# Progs:
 # terminal emulator
 super + Return
 	urxvt
 
 # program launcher
 super + @space
-	dmenu_run -i -nb white -nf black -sb lightblue -sf white
+	dmenu_run -i -nb black -nf white -sb lightblue -sf black
+
+# Chrome incognito
+super + c
+	chromium -incognito
+
+# For muh netflix
+super + C
+	google-chrome
 
 # make sxhkd reload its configuration files:
 super + Escape
