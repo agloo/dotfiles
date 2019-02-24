@@ -20,11 +20,13 @@ exec ~/.config/polybar/launch.sh &
 exec ~/.fehbg &
 # WM
 exec bspwm &
+# Make pulseaudio run inside jack, for audio applications.
+#cadence-session-start --system-start
 # Redshift and systray icon
 exec redshift-gtk &
-# NetworkManager systray icon
-exec nm-applet &
-# Automount usb sticks. pkill this to end your session
+# NetworkManager systray icon. Not working.
+# exec nm-applet &
+# Automount usb sticks.
 exec udiskie &
 # Terminal daemon to save muh cycles
 exec urxvtd

@@ -30,7 +30,7 @@ foreground = ${colors.foreground}
 
 ;Lines are the pretty colors underlining.
 line-size = 1
-;line-color = #f00
+line-color = ${colors.background}
 
 border-size = 0
 border-color = ${colors.foreground}
@@ -339,7 +339,8 @@ ramp-capacity-1 = ♥
 ramp-capacity-2 = ♥
 ramp-capacity-0-foreground = ${xrdb:color9}
 ramp-capacity-1-foreground = ${xrdb:color3}
-ramp-capacity-2-foreground = ${xrdb:color10}
+ramp-capacity-2-foreground = ${xrdb:color11}
+ramp-capacity-3-foreground = ${xrdb:color10}
 
 animation-charging-0 = ☇
 animation-charging-1 = ⚡
