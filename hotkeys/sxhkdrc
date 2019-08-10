@@ -1,7 +1,7 @@
 # Progs:
 # terminal emulator
 super + Return
-	urxvt
+	urxvtc -e tmux
 
 # program launcher
 super + @space
@@ -139,7 +139,7 @@ XF86AudioMute
 	amixer -q sset Master toggle
 
 XF86RotateWindows
-	~/dotfiles/thinkpad/flip_touch.sh rot
+	~/.rotate_touch.sh
 
 XF86TaskPane
-	~/dotfiles/thinkpad/flip_touch.sh
+	~/.flip_touch.sh

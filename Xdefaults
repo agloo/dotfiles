@@ -15,7 +15,7 @@ URxvt.boldFont: -benis-lemon-medium-r-normal--11-110-75-75-m-50-iso8859-9, xft:U
 ! Esper
 ! special
 *.foreground:   #d7d6d7
-*.background:   #1a1e21
+*.background:   #2c2d2d
 *.cursorColor:  #d7d6d7
 
 ! black
