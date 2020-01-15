@@ -2,12 +2,12 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 set shell=/bin/bash "Very important. Vundle errors without.
 call vundle#begin()
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'luochen1990/rainbow'
-Plugin 'gnattishness/cscope-maps'
+	Plugin 'ntpeters/vim-better-whitespace'
+	Plugin 'luochen1990/rainbow'
+	Plugin 'preservim/nerdcommenter'
 call vundle#end()
 
-
+""Plugin configs:
 "for rainbow parens:
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 	let g:rainbow_conf = {
@@ -33,38 +33,48 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 	\	}
 	\}
 
-
-"essentials:
+""Essentials:
 set nu
 filetype plugin on
 filetype plugin indent on
 set autoread
-
-"colors:
-syntax on
-set t_Co=256
-"set background=light " If you get weird different line numbers.
-colorscheme termcolors " Default just uses your Xresources. It is purity.
-hi NonText ctermbg=none "Make sure hanging screen matches the background
-hi LineNr ctermbg=none "Ditto for line numbers
-
-"extra flavor for displaying whitespace.
-set list
-set listchars=tab:>-
-set lcs+=space:·
-set hlsearch "Highlight search tems.
-
+set undofile " Undo persists on file close.
 "tabs:
 set smarttab "Use shiftwidth instead of tabstop in indenting
 set tabstop=4  "each tab is 4 spaces
 set softtabstop=4
 set shiftwidth=4 "Number of spaces in autoindent
 set autoindent
+set autoread "Refresh file when it's changed.
+set clipboard+=unnamed "Sys copy+paste sometimes works on OSX.
+set smartcase " search is case-insensitive unless you include caps.
+"extra flavor for displaying whitespace.
+set list
+set listchars=tab:>-
+set lcs+=space:·
+set hlsearch "Highlight search tems.
+" Make vim use perl/python style regex escaping.
+nnoremap / /\v
+vnoremap / /\v
+set gdefault " s///g by default. Appending g turns it off.
+
+"colors:
+syntax on
+set t_Co=256
+"set background=light " If you get weird different line number backgrounds.
+colorscheme termcolors " Homemade color scheme to just use your Xresources. It is purity.
+hi NonText ctermbg=none "Make sure hanging screen matches the background
+hi LineNr ctermbg=none "Ditto for line numbers
 
 set pastetoggle=<F3>
-"clear search whenever you hit space.
+"clear search whenever you hit F5.
 nnoremap <F5> :noh<return>
 
+" Tab in command mode shows a full list.
+set wildmenu
+set wildmode=list
+
+""Cscope
 "Make cscope look up directories for the db.
 function! LoadCscope()
 	let db = findfile("cscope.out", ".;")
@@ -80,5 +90,16 @@ function! LoadCscope()
 endfunction
 au BufEnter /* call LoadCscope()
 
-"optional:
+" Leader is cool and you should know about it.
+nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+""optional:
 "set showmatch "use if rainbow parens isn't working
+set ttyfast " Tells vim we have a fast terminal.
