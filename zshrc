@@ -15,15 +15,21 @@ alias bell="say bleep blop bloopity"
 #Aliases:
 alias main="git checkout main"
 alias gap="git add -p"
-alias gcp="git checkout -p"
 alias gb="git branch"
+alias gcm="git commit -m"
+alias gcp="git checkout -p"
 alias gdc="git diff --cached"
 alias gd="git diff"
-alias gp="git pull"
+alias gl="git log"
+alias gpl="git pull"
+alias gps="git push"
 alias gs="git status"
+alias gsh="git show"
 # git branch in Prompt:
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 zstyle ':vcs_info:git:*' formats '%b'
+
+source .zsh_adobe
