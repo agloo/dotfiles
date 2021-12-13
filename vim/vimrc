@@ -39,6 +39,7 @@ filetype plugin on
 filetype plugin indent on
 set autoread
 set undofile " Undo persists on file close.
+set undodir=/tmp//
 "tabs:
 set smarttab "Use shiftwidth instead of tabstop in indenting
 set tabstop=4  "each tab is 4 spaces
