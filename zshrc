@@ -32,4 +32,6 @@ precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 zstyle ':vcs_info:git:*' formats '%b'
 
-source .zsh_adobe
+# Keep a separate file for any anliases others
+# have a vested interest in keeping private.
+source .zshcorp
