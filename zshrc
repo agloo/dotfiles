@@ -34,6 +34,7 @@ alias gpl="git pull"
 alias gps="git push"
 alias gs="git status"
 alias gsh="git show"
+
 # git branch in Prompt:
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
