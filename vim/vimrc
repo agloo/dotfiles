@@ -5,6 +5,7 @@ call vundle#begin()
 	Plugin 'ntpeters/vim-better-whitespace'
 	Plugin 'luochen1990/rainbow'
 	Plugin 'preservim/nerdcommenter'
+	Plugin 'vim-gutentags'
 call vundle#end()
 
 ""Plugin configs:
