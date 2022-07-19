@@ -56,9 +56,9 @@ set listchars=tab:>-
 set lcs+=space:·
 set hlsearch "Highlight search tems.
 " Make vim use perl/python style regex escaping.
-nnoremap / /\v
-vnoremap / /\v
-set gdefault " s///g by default. Appending g turns it off.
+"nnoremap / /\v
+"vnoremap / /\v
+"set gdefault " s///g by default. Appending g turns it off.
 
 "colors:
 syntax on
