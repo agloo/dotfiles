@@ -15,7 +15,7 @@ alias x="xcodebuild"
 
 # Cscope. There could likely be done better with some kind of plugin,
 # maybe gutentags, but for now I don't work in enough different projects to care.
-export CSCOPE_BASE="PUTWHATYOUWANTFORYOURCSCOPEROOTHERE"
+export CSCOPE_BASE="$base/"
 export CSCOPE_DB=$CSCOPE_BASE/cscope.out
 alias scop="cd $CSCOPE_BASE && cscope -d; cd - > /dev/null"
 alias mkscop="cd $CSCOPE_BASE && cscope -Rbq"
@@ -44,4 +44,4 @@ zstyle ':vcs_info:git:*' formats '%b'
 
 # Keep a separate file for any anliases others
 # have a vested interest in keeping private.
-source .zshcorp
+source ~/.zshcorp
