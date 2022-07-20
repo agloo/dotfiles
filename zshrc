@@ -2,11 +2,12 @@ PROMPT='%~ %(?.%F{green}.%F{red})☭ %F{240}'
 RPROMPT=\$vcs_info_msg_0_
 
 # Fundies
-alias ls='ls -GH'
 alias dw="cd ~/Downloads"
+alias f="find . -iname"
+alias g="grep -siIr ."
+alias ls='ls -GH'
+alias l='ls'
 alias v="vim"
-alias vi="vim"
-alias gerp="grep -siIr ."
 
 # OSX aliases to && after long running commands.
 alias minibell="say 鐘"
